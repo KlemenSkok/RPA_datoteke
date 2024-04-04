@@ -8,13 +8,13 @@
 using namespace std;
 
 
-void napolni_osebo(struct Oseba &a) {
+/* void napolni_osebo(struct Oseba &a) {
     fgets(a.priimek, 20, stdin);
     cin >> a.starost;
     cin >> a.visina;
     cin.ignore();
 }
-
+ */
 void izpisi_osebo(struct Oseba &a) {
     cout << a.priimek << a.starost << " " << a.visina << "\n\n";
 }
@@ -82,7 +82,7 @@ int main() {
         neurejen_vpis(a, "osebe.bin");
     } */
 
-    izpis_dat("dijaki2.bin");
+    izpis_dat("dijaki3.bin");
 
 
     return 0;

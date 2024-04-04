@@ -7,21 +7,21 @@
 using namespace std;
 
 
-bool enako(struct Oseba a, struct Oseba b) {
+/* bool enako(struct Oseba a, struct Oseba b) {
     return (
         !strcmp(a.priimek, b.priimek) &&
         a.starost == b.starost && 
         a.visina == b.visina
     );
-}
+} */
 
-void napolni_osebo(struct Oseba &a) {
+/* void napolni_osebo(struct Oseba &a) {
     fgets(a.priimek, 20, stdin);
     cin >> a.starost;
     cin >> a.visina;
     cin.ignore();
 }
-
+ */
 void uredi(string file_name) {
 
 }
@@ -53,6 +53,7 @@ int st_structov(string file_name) {
     fstream f(file_name, ios::binary | ios::in | ios::out | ios::ate);
     if(f.is_open()) {
         return f.tellg() / sizeof(struct Oseba);
+        f.close();
     }
     return -1;
 }
